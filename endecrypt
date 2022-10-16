@@ -1,0 +1,33 @@
+
+
+let p = 7727;
+let q = 7741;
+let n = BigInt(59814707);
+let totient = 59799240;
+let e = BigInt(14605031);
+let d = BigInt(13772831);
+
+
+let value = BigInt(2);
+
+
+//encrypt with public key
+//cipher = message ^ e mod n
+let cipher = (value ** e) % n;
+console.log(cipher);
+
+//decrypt with private key
+//message = cipher ^ d mod n
+let message = (cipher ** d) % n;
+console.log(message);
+
+
+let valueForProf = BigInt(1203);
+
+//encrypt with private key
+let myMessage = (valueForProf ** d) % n;
+console.log(myMessage);
+
+//decrypt with public key
+let myMessageDecrypted = (myMessage ** e) % n;
+console.log(myMessageDecrypted);
