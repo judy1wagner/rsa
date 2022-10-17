@@ -1,12 +1,15 @@
 
+//My original values used the googled prime number 7741 were 
+//p= 7727, q = 7741, n = 59814707, e = 14605031, totient = 59799240, d = 13772831
 
 let p = 7727;
-let q = 7741;
-let n = BigInt(59814707);
-let totient = 59799240;
-let e = BigInt(14605031);
-let d = BigInt(13772831);
+let q = 7703;
+let n = BigInt(59521081);
+let totient = 59505652;
+let e = BigInt(12669429);
+let d = BigInt(15862301);
 
+//p= 7727, q = 7703, n = 59521081, e = 12669429, totient = 59505652, d = 15862301
 
 let value = BigInt(2);
 

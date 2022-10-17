@@ -1,23 +1,44 @@
 
-//Step 1 - generate all prime numbers up to a certain number
+//this file creates an array of prime numbers, although it doesn't 
+//include all prime numbers and does contain Carmichael values
 
-const limit = 10;
+/*
+*********************************************
+*    Title: Miller Rabin Primality test steps with example in Cryptography Solved example to check prime numbers
+*    Author: Parinita Hajra, Assistant Professor at JECRC University, Jaipur
+*    Date: July 14, 2019
+*    Code version: n/a
+*    Availability: https://www.youtube.com/watch?v=RNxr7km8lHo
+*********************************************
+*/
+
+
+//test a number to see if it's prime
+//find m with k = 1
+//n-1 = m * 2^k
+let n = BigInt(1);
+let k = BigInt(1); 
+let a = BigInt(2);
+let one = BigInt(1);
+let m = BigInt((n-one)/a);
+console.log(m);
 let primes = [];
 
-//for(num = 4; num < limit; num++){
-    //true means prime
-    //false means composite
-    
-    //find num-1 = 2**k * m
 
-    let num = 31;
-    let i = 1;
-    let m = 0;
-    while(m/parseInt(m)===0){ //tests if m is an integer, because if it's not an integer, 
-        //there will be numbers after the decimal, so m/parse(Int) will result in decimal numbers
-        m = (num - 1) / (2**(i));
-        i = i + 1;
-        console.log(m);
+//if k <= 1: calculate T, T = a^m % n 
+
+let t = BigInt((a**m) % n);
+console.log(t);
+
+for (let i = BigInt(1); i < 10000; i = i + one){
+    m = (i-one)/a;
+    t = (a**m) % i;
+    if(t === one){
+        primes.push(i);
     }
+}
+console.log(primes.toString());
 
-//}
+
+
+

@@ -1,8 +1,9 @@
 
-
-
 let p = 7727;
-let q = 7741;
+let q = 7703; 
+//My original q was 7741, because I couldn't figure out how to generate
+// prime numbers, so I started with two prime numbers I just googled.
+//The two numbers above are in the array created in the prime.js file
 
 let n = p * q;
 console.log(`n = ${n}`);
@@ -10,11 +11,17 @@ console.log(`n = ${n}`);
 let totient = (p-1)*(q-1);
 console.log(`totient = ${totient}`);
 
-/****************************************************
- * https://www.geeksforgeeks.org/how-to-calculate-greatest-common-divisor-of-two-or-more-numbers-arrays-in-javascript/
- * 
- ****************************************************
- */
+
+/*
+*********************************************
+*    Title: How to calculate greatest common divisor of two or more numbers/arrays in JavaScript ?
+*    Author: swapnil074 (https://auth.geeksforgeeks.org/user/swapnil074)
+*    Date: 4/22/2021
+*    Code version: JavaScript
+*    Availability: https://www.geeksforgeeks.org/how-to-calculate-greatest-common-divisor-of-two-or-more-numbers-arrays-in-javascript/
+*********************************************
+*/
+
  // Function to return gcd of random e and totient
  // parameter b = totient
  // parameter a = e
@@ -38,8 +45,15 @@ while(testGCD !== 1);
 console.log(`finalGCD = ${testGCD}, final e = ${e}`);
 
 /*
-https://www.w3resource.com/javascript-exercises/javascript-math-exercise-47.php
+*********************************************
+*    Title: JavaScript: Calculate the extended Euclid Algorithm or extended GCD
+*    Author: w3resource
+*    Date: 8/19/2022
+*    Code version: JavaScript
+*    Availability: https://www.w3resource.com/javascript-exercises/javascript-math-exercise-47.php
+*********************************************
 */
+
 
 function Euclid_gcd(a, b) {
     a = +a;
